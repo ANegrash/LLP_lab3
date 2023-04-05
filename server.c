@@ -1,9 +1,9 @@
 #include <pb_encode.h>
 #include <pb_decode.h>
-#include "proto_module/message.pb.h"
-#include "proto_module/common.h"
-#include "server_module/graph.h"
-#include "server_module/reqest_handler.h"
+#include "protobuffer/message.pb.h"
+#include "protobuffer/common.h"
+#include "server/graph.h"
+#include "server/reqest_handler.h"
 #include "structure.h"
 #include "string_tools.h"
 #include <stdio.h>

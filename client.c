@@ -1,10 +1,10 @@
 #include <stdio.h>
-#include "gremlin_module/include/view_tools/parser_pieces.h"
-#include "gremlin_module/include/stools/printer.h"
+#include "gremlin/include/view_tools/parser_pieces.h"
+#include "gremlin/include/stools/printer.h"
 #include <pb_encode.h>
 #include <pb_decode.h>
-#include "proto_module/message.pb.h"
-#include "proto_module/common.h"
+#include "protobuffer/message.pb.h"
+#include "protobuffer/common.h"
 #include <arpa/inet.h>
 #include <netinet/in.h>
 #include <sys/socket.h>
@@ -47,8 +47,6 @@ int main(int argc, char *argv[]) {
     while (1) {
         struct view *view = parse_request();
         if (view != NULL) {
-//            print_view(view);
-
             View view_new = View_init_zero;
             parse_view(*view, &view_new);
 
